@@ -22,12 +22,14 @@ def sendBuildStatus(status, message) {
 if (env.BRANCH_NAME == 'master') {
   node {
 echo "master"
-deploy 'production'
-
     echo "Deployed to production"
   }
 } else {
+if (env.BRANCH_NAME == 'staging') {
+if (env.BRANCH_NAME.startsWith('PR-')) {
   node {
 echo "pr"
   }
+}
+}
 }
