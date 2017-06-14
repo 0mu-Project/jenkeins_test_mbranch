@@ -19,13 +19,12 @@ def sendBuildStatus(status, message) {
   ])
 }
 
-if (env.BRANCH_NAME == 'master') {
+if (env.BRANCH_NAME.startsWith('PR-')) {
   node {
-echo "master"
+echo "pr"
     echo "Deployed to production"
   }
 } else {
-if (env.BRANCH_NAME.startsWith('PR-')) {
   node {
 echo "pr"
   }
