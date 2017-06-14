@@ -19,7 +19,7 @@ def sendBuildStatus(status, message) {
   ])
 }
 
-if (env.CHANGE_ID != null) {
+if (env.CHANGE_ID == null) {
   node {
 echo "pr"
     echo "Deployed to production"
