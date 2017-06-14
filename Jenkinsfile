@@ -26,7 +26,7 @@ echo "pr"
   }
 } else {
   node {
-echo "pr"
+echo "not pr"
   }
 }
 
