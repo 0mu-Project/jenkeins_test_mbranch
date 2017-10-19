@@ -19,16 +19,19 @@ def sendBuildStatus(status, message) {
   ])
 }
 
+
 if (env.CHANGE_ID != null) {
   node {
-echo "pr"
-sh "cat ./Jenkins_Test_01/README.md"
-    echo "Deployed to production"
+  checkout scm
+  echo "pr"
+  sh "cat ./Jenkins_Test_01/README.md"
+  echo "Deployed to production"
   }
 } else {
   node {
-echo "not pr"
-sh "cat ./README.md"
+  checkout scm
+  echo "not pr"
+  sh "cat README.md"
   }
 }
 
