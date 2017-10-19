@@ -27,6 +27,7 @@ echo Jenkins_Test_01/README.md
   }
 } else {
   node {
+echo Jenkins_Test_01/README.md 
 echo "not pr"
   }
 }
