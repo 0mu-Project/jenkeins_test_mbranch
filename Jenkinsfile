@@ -24,14 +24,12 @@ if (env.CHANGE_ID != null) {
   node {
   checkout scm
   echo "pr"
-  sh "cat ./Jenkins_Test_01/README.md"
   echo "Deployed to production"
   }
 } else {
   node {
   checkout scm
   echo "not pr"
-  sh "cat ./Jenkins_Test_01/README.md"
   }
 }
 
