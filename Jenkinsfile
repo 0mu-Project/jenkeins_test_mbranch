@@ -22,10 +22,12 @@ def sendBuildStatus(status, message) {
 if (env.CHANGE_ID != null) {
   node {
 echo "pr"
+sh "cat ./Jenkins_Test_01/README.md"
     echo "Deployed to production"
   }
 } else {
   node {
+echo Jenkins_Test_01/README.md 
 echo "not pr"
   }
 }
