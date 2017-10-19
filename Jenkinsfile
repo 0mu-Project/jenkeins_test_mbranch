@@ -28,6 +28,7 @@ sh "cat ./Jenkins_Test_01/README.md"
 } else {
   node {
 echo "not pr"
+sh "cat ./README.md"
   }
 }
 
