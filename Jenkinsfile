@@ -31,7 +31,7 @@ if (env.CHANGE_ID != null) {
   node {
   checkout scm
   echo "not pr"
-  sh "cat README.md"
+  sh "cat ./Jenkins_Test_01/README.md"
   }
 }
 
